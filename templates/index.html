@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanSoundClassification.com</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .header {
+      font-size: 40px;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    a:hover {
+      color: #4B0082;
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-bottom: auto;
+    }
+
+    .numdiv {
+      border: 1px solid red;
+      padding-bottom: 12px;
+      margin: 2px 240px;
+    }
+
+    .numdiv form {
+      margin-top: 4px;
+    }
+
+    .numdiv form #num {
+      padding: 4px;
+      width: 50px;
+    }
+
+    input[type="number"] {
+      text-align: center;
+    }
+
+    .inp {
+      padding: 4px;
+      margin-bottom: 2px;
+      border: 1.5px solid black;
+      border-radius: 10px 10px
+    }
+
+    .inp::placeholder {
+      text-align: center;
+    }
+
+    #login {
+      border: 1px solid red;
+      padding: 1rem 1rem;
+      margin: 1rem 4rem;
+    }
+
+    #login h2 {
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      margin-top: 8px;
+      padding: 7px 18px;
+      border-radius: 6px 6px;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <center>
+    <header class="header"><a href="/">Urban Sound Classification</a></header>
+
+
+
+    <form id="login" action="{{  url_for('predict')  }}" method="post" enctype="multipart/form-data">
+      <h2>Select audio files :</h2>
+      <div id="inpblk">
+        <div id="inpTag">
+          <input type="file" class="inp" name="audio" accept="audio/*"/>
+        </div>
+      </div>
+      <div>
+        <button class='btn' type='submit' value='predict'>Predict Class</button>
+      </div>
+    </form>
+
+  </center>
+
+</body>
+
+</html>

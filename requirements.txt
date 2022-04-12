@@ -1,0 +1,4 @@
+numpy==1.21
+flask
+librosa
+tensorflow-cpu
